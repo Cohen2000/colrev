@@ -166,6 +166,7 @@ class Corrections:
             f"{corrected_record['ID']}.json"
         )
         filepath.parent.mkdir(exist_ok=True)
+        print(filepath)
 
         with open(filepath, "w", encoding="utf8") as corrections_file:
             json.dump(dict_to_save, corrections_file, indent=4)
@@ -180,6 +181,7 @@ class Corrections:
         # colrev-hooks-report .report.log
 
         dataset = self.review_manager.dataset
+        print("ENTERING")
 
         if not dataset.records_file.is_file():
             return
