@@ -66,16 +66,3 @@ repos:
     always_run: true
     args:
       ["--disable-warnings"]
-- repo: local # pylint should mostly be covered by ruff. Once custom checkers are supported (.pylintrc), we will switch to ruff completely.
-  hooks:
-    - id: pylint
-      name: pylint
-      entry: pylint
-      language: system
-      types: [python]
-      files: colrev
-      args:
-        [
-          "-rn", # Only display messages
-          "-sn", # Don't display the score
-        ]
