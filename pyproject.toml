@@ -144,5 +144,5 @@ line-length = 160
 
 [build-system]
 # requires = ["poetry>=1.2.0b1"]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.0.0", "cython<3.0"]
 build-backend = "poetry.core.masonry.api"
